@@ -28,7 +28,7 @@ find ./ -name "*.txt" > dir1/summary.txt
 # дописываем в task/dir1/summary.txt содержимое task/dir2/list.txt
 cat dir2/list.txt >> dir1/summary.txt
 # определяем переменную окружения NAME со значением "Всем студентам"
-export NAME='Всем студентам'
+NAME='Всем студентам'
 # запускаем task/dir2/hello.sh с переменной окружения NAME в качестве аргумента
 # вывод скрипта должен дописаться в файл task/dir1/summary.txt
 dir2/hello.sh "$NAME" >> dir1/summary.txt
@@ -43,5 +43,3 @@ grep -i "dir" 'Практическое задание' | sort
 cd ..
 # удаляем директорию task со всем содержимым
 rm -rf task
-# нет в задании, но "Готовый скрипт должен запускаться в любой директории и не оставлять после себя никаких следов, кроме вывода на консоль."
-unset NAME
